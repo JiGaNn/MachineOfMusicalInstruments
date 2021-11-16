@@ -56,7 +56,8 @@ namespace MachineOfMusicalInstruments
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.ReadOnly = true;
             this.txtInfo.Size = new System.Drawing.Size(288, 49);
-            this.txtInfo.TabIndex = 1;
+            this.txtInfo.TabIndex = 2;
+            this.txtInfo.TabStop = false;
             this.txtInfo.Text = "";
             // 
             // txtOut
@@ -64,7 +65,8 @@ namespace MachineOfMusicalInstruments
             this.txtOut.Location = new System.Drawing.Point(41, 130);
             this.txtOut.Name = "txtOut";
             this.txtOut.Size = new System.Drawing.Size(182, 124);
-            this.txtOut.TabIndex = 2;
+            this.txtOut.TabIndex = 3;
+            this.txtOut.TabStop = false;
             this.txtOut.Text = "";
             // 
             // btnGet
@@ -72,7 +74,7 @@ namespace MachineOfMusicalInstruments
             this.btnGet.Location = new System.Drawing.Point(234, 130);
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(95, 124);
-            this.btnGet.TabIndex = 3;
+            this.btnGet.TabIndex = 1;
             this.btnGet.Text = "Взять";
             this.btnGet.UseVisualStyleBackColor = true;
             this.btnGet.Click += new System.EventHandler(this.btnGet_Click);

@@ -13,10 +13,19 @@ namespace MachineOfMusicalInstruments
     public partial class Form1 : Form
     {
         List<MusInst> musInst = new List<MusInst>();
+        private void tb_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{Tab}");
+            }
+        }
         public Form1()
         {
             InitializeComponent();
             ShowInfo();
+
+            btnRefill.KeyUp += tb_KeyUp;
         }
         private void ShowInfo()
         {
@@ -39,6 +48,7 @@ namespace MachineOfMusicalInstruments
 
         private void btnRefill_Click(object sender, EventArgs e)
         {
+            btnGet.KeyUp -= tb_KeyUp;
             musInst.Clear();
             var rand = new Random();
             for (int i = 0; i < 10; i++)
@@ -64,6 +74,7 @@ namespace MachineOfMusicalInstruments
             {
                 txtOut.Text = "Пусто O_o";
                 pictureBox1.Visible = false;
+                btnGet.KeyUp += tb_KeyUp;
                 return;
             }
             pictureBox1.Visible = true;
