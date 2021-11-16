@@ -36,6 +36,7 @@ namespace MachineOfMusicalInstruments
             txtInfo.Text = "Струнные\tКлавишные\tУдарные\n";
             txtInfo.Text += String.Format("{0}\t\t{1}\t\t{2}", guitarCount, pianoCount, drumCount);
         }
+
         private void btnRefill_Click(object sender, EventArgs e)
         {
             musInst.Clear();
@@ -45,19 +46,18 @@ namespace MachineOfMusicalInstruments
                 switch (rand.Next() % 3)
                 {
                     case 0:
-                        musInst.Add(new Guitar());
+                        musInst.Add(Guitar.Generate());
                         break;
                     case 1:
-                        musInst.Add(new Piano());
+                        musInst.Add(Piano.Generate());
                         break;
                     case 2:
-                        musInst.Add(new Drum());
+                        musInst.Add(Drum.Generate());
                         break;
                 }
             }
             ShowInfo();
         }
-
         private void btnGet_Click(object sender, EventArgs e)
         {
             if (musInst.Count == 0)
