@@ -44,6 +44,7 @@ namespace MachineOfMusicalInstruments
             this.btnRefill.TabIndex = 0;
             this.btnRefill.Text = "Перезаполнить";
             this.btnRefill.UseVisualStyleBackColor = true;
+            this.btnRefill.Click += new System.EventHandler(this.btnRefill_Click);
             // 
             // txtInfo
             // 
@@ -71,6 +72,7 @@ namespace MachineOfMusicalInstruments
             this.btnGet.TabIndex = 3;
             this.btnGet.Text = "Взять";
             this.btnGet.UseVisualStyleBackColor = true;
+            this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
             // 
             // Form1
             // 
