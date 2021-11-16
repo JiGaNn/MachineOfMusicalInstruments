@@ -63,11 +63,14 @@ namespace MachineOfMusicalInstruments
             if (musInst.Count == 0)
             {
                 txtOut.Text = "Пусто O_o";
+                pictureBox1.Visible = false;
                 return;
             }
+            pictureBox1.Visible = true;
             var musI = musInst[0];
             musInst.RemoveAt(0);
             txtOut.Text = musI.GetInfo();
+            pictureBox1.Image = musI.img;
             ShowInfo();
         }
     }

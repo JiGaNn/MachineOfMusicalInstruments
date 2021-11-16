@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 
 namespace MachineOfMusicalInstruments
 {
     public enum MusInstType { acoustic, electronic }
     abstract public class MusInst
     {
+        public Image img;
         public static Random rnd = new Random();
         public MusInstType type;
         public virtual String GetInfo()
@@ -35,7 +36,8 @@ namespace MachineOfMusicalInstruments
             {
                 type = (MusInstType)rnd.Next(2),
                 amountOfString = 4 + rnd.Next() % 9,
-                builds = (BuildType)rnd.Next(4)
+                builds = (BuildType)rnd.Next(4),
+                img = Properties.Resources.guitar_circle
             };
         }
     }
@@ -56,7 +58,8 @@ namespace MachineOfMusicalInstruments
             {
                 type = (MusInstType)rnd.Next(2),
                 amountOfFullOctaves = 4 + rnd.Next() % 4,
-                amountOfKeys = 32 + rnd.Next() % 57
+                amountOfKeys = 32 + rnd.Next() % 57,
+                img = Properties.Resources.piano
             };
         }
     }
@@ -78,7 +81,8 @@ namespace MachineOfMusicalInstruments
             {
                 type = (MusInstType)rnd.Next(2),
                 radius = 4 + rnd.Next() % 9,
-                typeOfDrum = (DrumType)rnd.Next(4)
+                typeOfDrum = (DrumType)rnd.Next(4),
+                img = Properties.Resources.drums
             };
         }
     }
