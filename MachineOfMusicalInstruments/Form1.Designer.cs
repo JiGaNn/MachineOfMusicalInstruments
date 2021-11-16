@@ -55,15 +55,16 @@ namespace MachineOfMusicalInstruments
             this.txtInfo.Location = new System.Drawing.Point(41, 75);
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.ReadOnly = true;
-            this.txtInfo.Size = new System.Drawing.Size(288, 49);
+            this.txtInfo.Size = new System.Drawing.Size(288, 67);
             this.txtInfo.TabIndex = 2;
             this.txtInfo.TabStop = false;
             this.txtInfo.Text = "";
             // 
             // txtOut
             // 
-            this.txtOut.Location = new System.Drawing.Point(41, 130);
+            this.txtOut.Location = new System.Drawing.Point(41, 148);
             this.txtOut.Name = "txtOut";
+            this.txtOut.ReadOnly = true;
             this.txtOut.Size = new System.Drawing.Size(182, 124);
             this.txtOut.TabIndex = 3;
             this.txtOut.TabStop = false;
@@ -71,7 +72,7 @@ namespace MachineOfMusicalInstruments
             // 
             // btnGet
             // 
-            this.btnGet.Location = new System.Drawing.Point(234, 130);
+            this.btnGet.Location = new System.Drawing.Point(234, 148);
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(95, 124);
             this.btnGet.TabIndex = 1;
@@ -81,7 +82,7 @@ namespace MachineOfMusicalInstruments
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(41, 260);
+            this.pictureBox1.Location = new System.Drawing.Point(41, 278);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(288, 220);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -92,13 +93,14 @@ namespace MachineOfMusicalInstruments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 492);
+            this.ClientSize = new System.Drawing.Size(364, 519);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGet);
             this.Controls.Add(this.txtOut);
             this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.btnRefill);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Machine Of Music";

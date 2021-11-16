@@ -25,7 +25,7 @@ namespace MachineOfMusicalInstruments
         public BuildType builds;// много строев
         public override string GetInfo()
         {
-            var str = "Струнный инструмент";
+            var str = "Гитара";
             str += base.GetInfo();
             str += String.Format("\nКоличество струн: {0}\nСтрой: {1}", amountOfString, builds);
             return str;
@@ -47,7 +47,7 @@ namespace MachineOfMusicalInstruments
         public int amountOfFullOctaves;// 4, 5, 7 октав
         public override string GetInfo()
         {
-            var str = "Клавишный инструмент";
+            var str = "Рояль";
             str += base.GetInfo();
             str += String.Format("\nКоличество клавиш: {0}\nКоличество полных октав: {1}", amountOfKeys, amountOfFullOctaves);
             return str;
